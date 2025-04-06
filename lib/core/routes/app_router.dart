@@ -1,5 +1,6 @@
 import 'package:go_router/go_router.dart';
 import 'package:h_space_task/presentation/views/login_view.dart';
+import 'package:h_space_task/presentation/views/register_view.dart';
 import '../../presentation/views/welcome_view.dart';
 
 class AppRouter {
@@ -17,6 +18,10 @@ class AppRouter {
       GoRoute(
         path: login,
         builder: (context, state) => const LoginView(),
+      ),
+      GoRoute(
+        path: register,
+        builder: (context, state) => const RegisterView(),
       ),
     ],
   );
