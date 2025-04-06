@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:h_space_task/core/styles/colors/my_colors.dart';
 
 import 'core/routes/app_router.dart';
-import 'core/utils/media_query_config.dart';
+import 'core/utils/config/media_query_config.dart';
 
 void main() {
   runApp(const MyApp());
