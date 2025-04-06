@@ -7,4 +7,6 @@ class MyColors {
   static const Color whiteColor = Color(0xffFFFFFF);
   static const Color blackColor = Color(0xff000000);
   static const Color buttonTextColor = Color(0xff292A2E);
+  static const Color textFieldBgColor = Color(0xffF1F4FF);
+  static const Color textFieldColor = Color(0xff626262);
 }
