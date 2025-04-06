@@ -26,6 +26,9 @@ class CustomButtonSection extends StatelessWidget {
           ),
           Expanded(
             child: CustomButton(
+              onTap: (){
+                context.go(AppRouter.register);
+              },
               textColor: MyColors.buttonTextColor,
               buttonColor: MyColors.whiteColor,
               buttonText: "Sign Up",

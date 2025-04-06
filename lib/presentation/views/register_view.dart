@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:h_space_task/core/styles/colors/my_colors.dart';
-import 'package:h_space_task/core/styles/fonts/my_fonts.dart';
-import 'package:h_space_task/core/utils/widgets/custom_button.dart';
-
 import '../../core/routes/app_router.dart';
-import '../widgets/custom_text_field.dart';
+import '../../core/styles/colors/my_colors.dart';
+import '../../core/styles/fonts/my_fonts.dart';
+import '../../core/utils/widgets/custom_button.dart';
+import '../widgets/custom_text_field_section.dart';
 
-class LoginView extends StatelessWidget {
-  const LoginView({super.key});
+class RegisterView extends StatelessWidget {
+  const RegisterView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,11 +21,11 @@ class LoginView extends StatelessWidget {
               SliverToBoxAdapter(
                 child: Padding(
                   padding:
-                      const EdgeInsets.symmetric(horizontal: 22, vertical: 80),
+                  const EdgeInsets.symmetric(horizontal: 22, vertical: 80),
                   child: Column(
                     children: [
                       Text(
-                        "Login here",
+                        "Create Account",
                         style: MyFonts.styleBold700_30
                             .copyWith(color: MyColors.primaryColor),
                       ),
@@ -34,39 +33,20 @@ class LoginView extends StatelessWidget {
                         height: 26,
                       ),
                       Text(
-                        "Welcome back you’ve been missed!",
+                        "Create an account so you can explore all the existing jobs",
                         textAlign: TextAlign.center,
-                        style: MyFonts.styleSemiBold600_20
+                        style: MyFonts.styleMedium500_16
                             .copyWith(color: MyColors.blackColor),
                       ),
                       SizedBox(
                         height: 78,
                       ),
-                      const CustomTextField(
-                        text: "Email",
-                      ),
-                      SizedBox(
-                        height: 29,
-                      ),
-                      const CustomTextField(
-                        text: "Password",
-                      ),
-                      SizedBox(
-                        height: 30,
-                      ),
-                      Align(
-                        alignment: Alignment.centerRight,
-                        child: Text(
-                          "Forgot your password?",
-                          style: MyFonts.styleSemiBold600_14
-                              .copyWith(color: MyColors.primaryColor),
-                        ),
-                      ),
+                      const CustomTextFieldSection(),
                       SizedBox(
                         height: 30,
                       ),
                       CustomButton(
-                        buttonText: "Sign in",
+                        buttonText: "Sign Up",
                         buttonColor: MyColors.primaryColor,
                         textColor: MyColors.whiteColor,
                         onTap: () {},
@@ -76,10 +56,10 @@ class LoginView extends StatelessWidget {
                       ),
                       GestureDetector(
                         onTap: (){
-                          context.go(AppRouter.register);
+                          context.go(AppRouter.login);
                         },
                         child: Text(
-                          "Create new account",
+                          "Already have an account",
                           style: MyFonts.styleSemiBold600_14
                               .copyWith(color: MyColors.secondaryColor),
                         ),
