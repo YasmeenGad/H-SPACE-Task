@@ -23,19 +23,34 @@ class FollowUpView extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Image.asset(Assets.imagesCheck, height: 20.h, width: 20.w,),
-              const SizedBox(height: 88,),
-              Text("Congratulations! Your password has been changed. Click Continue to log in",textAlign: TextAlign.center,style: MyFonts.styleMedium500_16.copyWith(color: MyColors.mediumGray),),
-              const SizedBox(height: 36,),
+              Image.asset(
+                Assets.imagesCheck,
+                height: 20.h,
+                width: 20.w,
+              ),
+              const SizedBox(
+                height: 88,
+              ),
+              Text(
+                "Congratulations! Your password has been changed. Click Continue to log in",
+                textAlign: TextAlign.center,
+                style: MyFonts.styleMedium500_16
+                    .copyWith(color: MyColors.mediumGray),
+              ),
+              const SizedBox(
+                height: 36,
+              ),
               Padding(
                 padding: const EdgeInsets.all(7.0),
                 child: GestureDetector(
-                  onTap: (){
-                    context.go(AppRouter.welcome);
-                  },
-                    child: CustomButton(buttonText: 'Follow-up', buttonColor: MyColors.primaryColor, textColor: MyColors.whiteColor)),
+                    onTap: () {
+                      context.go(AppRouter.welcome);
+                    },
+                    child: CustomButton(
+                        buttonText: 'Follow-up',
+                        buttonColor: MyColors.primaryColor,
+                        textColor: MyColors.whiteColor)),
               )
-
             ],
           ),
         ),
