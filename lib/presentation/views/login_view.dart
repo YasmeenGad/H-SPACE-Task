@@ -44,22 +44,29 @@ class LoginView extends StatelessWidget {
                       ),
                       const CustomTextField(
                         text: "Email",
+                        showBorder: false,
                       ),
                       SizedBox(
                         height: 29,
                       ),
                       const CustomTextField(
                         text: "Password",
+                        showBorder: false,
                       ),
                       SizedBox(
                         height: 30,
                       ),
                       Align(
                         alignment: Alignment.centerRight,
-                        child: Text(
-                          "Forgot your password?",
-                          style: MyFonts.styleSemiBold600_14
-                              .copyWith(color: MyColors.primaryColor),
+                        child: GestureDetector(
+                          onTap: (){
+                            context.go(AppRouter.passwordRecovery);
+                          },
+                          child: Text(
+                            "Forgot your password?",
+                            style: MyFonts.styleSemiBold600_14
+                                .copyWith(color: MyColors.primaryColor),
+                          ),
                         ),
                       ),
                       SizedBox(

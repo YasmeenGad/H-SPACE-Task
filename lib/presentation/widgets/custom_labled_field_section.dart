@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../core/styles/colors/my_colors.dart';
 import 'custom_labeled_field.dart';
 
 class CustomLabeledFieldSection extends StatelessWidget {
@@ -10,9 +11,9 @@ class CustomLabeledFieldSection extends StatelessWidget {
     return Column(
       spacing: 15,
       children: [
-        const CustomLabeledField(text: "Name"),
-        const CustomLabeledField(text: "Name of the pharmacy"),
-        const CustomLabeledField(text: "Pharmacy address"),
+        CustomLabeledField(text: "Name", filledColor: MyColors.grayColor,showBorder: false,),
+        CustomLabeledField(text: "Name of the pharmacy", filledColor: MyColors.grayColor,showBorder: false,),
+        CustomLabeledField(text: "Pharmacy address", filledColor: MyColors.grayColor,showBorder: false,),
       ],
     );
   }

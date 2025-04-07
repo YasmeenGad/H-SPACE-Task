@@ -5,8 +5,10 @@ import '../../core/styles/fonts/my_fonts.dart';
 import 'custom_text_field.dart';
 
 class CustomLabeledField extends StatelessWidget {
-  const CustomLabeledField({super.key, required this.text});
-  final String text;
+  const CustomLabeledField({super.key,  this.text, this.hintText, this.filledColor, required this.showBorder});
+  final String? text,hintText;
+  final Color? filledColor;
+  final bool showBorder;
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +17,7 @@ class CustomLabeledField extends StatelessWidget {
         Align(
           alignment: Alignment.centerLeft,
           child: Text(
-            text,
+            text?? "",
             style: MyFonts.styleSemiBold600_18
                 .copyWith(color: MyColors.blackColor),
           ),
@@ -24,8 +26,11 @@ class CustomLabeledField extends StatelessWidget {
           height: 6,
         ),
         CustomTextField(
-          filledColor: MyColors.grayColor,
+          hintColor: MyColors.grayColor,
           height: 38,
+          text: hintText?? "",
+          filledColor: filledColor,
+          showBorder: showBorder,
         )
       ],
     );

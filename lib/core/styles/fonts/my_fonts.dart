@@ -35,6 +35,10 @@ class MyFonts {
     fontWeight: FontWeight.w700,
     fontSize: 10,
   );
+  static TextStyle styleBold700_16 = GoogleFonts.poppins(
+    fontWeight: FontWeight.w700,
+    fontSize: 16,
+  );
   static TextStyle styleMedium500_16 = GoogleFonts.poppins(
     fontWeight: FontWeight.w500,
     fontSize: 16,
@@ -42,5 +46,9 @@ class MyFonts {
   static TextStyle styleMedium500_14 = GoogleFonts.poppins(
     fontWeight: FontWeight.w500,
     fontSize: 16,
+  );
+  static TextStyle styleMedium500_18 = GoogleFonts.poppins(
+    fontWeight: FontWeight.w500,
+    fontSize: 18,
   );
 }

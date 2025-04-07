@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:h_space_task/core/routes/app_router.dart';
 import 'package:h_space_task/core/styles/colors/my_colors.dart';
 import 'package:h_space_task/core/styles/fonts/my_fonts.dart';
 import 'package:h_space_task/core/utils/config/responsive_extension.dart';
@@ -25,7 +27,9 @@ class SuccessView extends StatelessWidget {
               buttonText: 'Done',
               buttonColor: MyColors.primaryColor,
               textColor: MyColors.whiteColor,
-
+              onTap: (){
+                context.go(AppRouter.welcome);
+              },
             ),
           )
         ],

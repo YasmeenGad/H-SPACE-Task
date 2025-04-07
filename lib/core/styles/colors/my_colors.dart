@@ -11,5 +11,6 @@ class MyColors {
   static const Color textFieldColor = Color(0xff626262);
   static const Color grayColor = Color(0xFFD9D9D9);
   static const Color  lavenderBlueColor = Color(0xFFC8D4FF);
-  static const Color amberOverlayColor = Color(0xFFB64A1C);
+  static const Color mediumGray = Color(0xFF989898);
+  static const Color orangeColor = Color(0xFFFB6D3A);
 }

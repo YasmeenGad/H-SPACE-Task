@@ -12,12 +12,15 @@ class CustomTextFieldSection extends StatelessWidget {
       children: [
         const CustomTextField(
           text: "Password",
+          showBorder: false,
         ),
         const CustomTextField(
           text: "Email",
+          showBorder: false,
         ),
         const CustomTextField(
           text: "ConfirmPassword",
+          showBorder: false,
         ),
       ],
     );
