@@ -7,9 +7,7 @@ import 'package:h_space_task/core/utils/widgets/custom_button.dart';
 import '../../core/routes/app_router.dart';
 import '../../core/styles/fonts/my_fonts.dart';
 import '../viewModel/complete_regisration_view_model.dart';
-import '../widgets/custom_file_field.dart';
 import '../widgets/custom_file_field_section.dart';
-import '../widgets/custom_labeled_field.dart';
 import '../widgets/custom_labled_field_section.dart';
 
 class CompleteRegistrationView extends StatefulWidget {
@@ -92,9 +90,14 @@ class _CompleteRegistrationViewState extends State<CompleteRegistrationView> {
                     },
                   ),
                   const SizedBox(height: 25),
-
-                  CustomButton(buttonText: 'Registration', buttonColor: MyColors.primaryColor, textColor: MyColors.whiteColor)
-
+                  CustomButton(
+                    buttonText: 'Registration',
+                    buttonColor: MyColors.primaryColor,
+                    textColor: MyColors.whiteColor,
+                    onTap: () {
+                      context.go(AppRouter.successView);
+                    },
+                  )
                 ],
               ),
             ),
